@@ -6,7 +6,7 @@ CloudHawk is a distributed, real-time cloud security monitoring system built on 
 
 ## Architecture Diagram
 
-Please check the cloudhawk-architecture pdf
+Please check the ![CloudHawk Architecture Diagram](../architecture.png)
 
 ## Components
 
