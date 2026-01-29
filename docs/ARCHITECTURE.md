@@ -6,63 +6,7 @@ CloudHawk is a distributed, real-time cloud security monitoring system built on 
 
 ## Architecture Diagram
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     CloudHawk Architecture                       │
-└─────────────────────────────────────────────────────────────────┘
-
-                        ┌──────────────┐
-                        │   AWS        │
-                        │  CloudTrail  │
-                        │   Events     │
-                        └──────┬───────┘
-                               │
-                        ┌──────▼───────┐
-                        │    Event     │
-                        │  Simulator   │
-                        └──────┬───────┘
-                               │
-                    ┌──────────▼──────────┐
-                    │   Apache Kafka      │
-                    │  (Message Broker)   │
-                    └──────────┬──────────┘
-                               │
-                ┌──────────────▼─────────────┐
-                │    Stream Processor        │
-                │  - Rule-based detection    │
-                │  - Correlation engine      │
-                │  - MITRE ATT&CK mapping    │
-                └──┬────────┬────────┬───┬───┘
-                   │        │        │   │
-        ┌──────────▼──┐  ┌─▼────┐  │   │
-        │  ML Engine  │  │Redis │  │   │
-        │  - Anomaly  │  │Cache │  │   │
-        │  Detection  │  └──────┘  │   │
-        └──────┬──────┘            │   │
-               │              ┌────▼───▼────┐
-               │              │ TimescaleDB │
-               │              │ (Time-Series│
-               │              │  Database)  │
-               └──────────────►└─────┬───────┘
-                              │      │
-                         ┌────▼──────▼─────┐
-                         │  Elasticsearch  │
-                         │  (Log Storage)  │
-                         └────────┬────────┘
-                                  │
-                         ┌────────▼────────┐
-                         │  FastAPI Server │
-                         │  - REST API     │
-                         │  - WebSockets   │
-                         └────┬─────┬──────┘
-                              │     │
-                    ┌─────────▼─┐   └──────────┐
-                    │   React   │              │
-                    │ Dashboard │      ┌───────▼────────┐
-                    └───────────┘      │   Grafana +    │
-                                       │  Prometheus    │
-                                       └────────────────┘
-```
+Please check the cloudhawk-architecture pdf
 
 ## Components
 
