@@ -88,27 +88,27 @@ This section documents what each screenshot proves.
 ### 1. Platform & Infrastructure
 
 - **Docker microservices running**  
-  → [Docker microservices running.png](testing/cloudhawk_testing_screenshots/Docker%20microservices%20running.png)  
+  → ![Docker microservices running.png](testing/cloudhawk_testing_screenshots/Docker%20microservices%20running.png)  
   Confirms all CloudHawk containers (Kafka, Redis, API, ML engine, DB, Dashboard, Prometheus, Grafana) are healthy.
 
 - **Kafka event stream**  
-  → [Kafka event stream.png](testing/cloudhawk_testing_screenshots/Kafka%20event%20stream.png)  
+  → ![Kafka event stream.png](testing/cloudhawk_testing_screenshots/Kafka%20event%20stream.png)  
   Shows CloudTrail events flowing into Kafka topics.
 
 - **Stream processor throughput**  
-  → [Stream processor throughput.png](testing/cloudhawk_testing_screenshots/Stream%20processor%20throughput.png)  
+  → ![Stream processor throughput.png](testing/cloudhawk_testing_screenshots/Stream%20processor%20throughput.png)  
   Verifies real-time ingestion and processing performance.
 
 - **ML engine status**  
-  → [ML engine status (8:20:23 PM).png](testing/cloudhawk_testing_screenshots/ML%20engine%20status%20(8:20:23%20PM).png)  
+  → ![ML engine status (8:20:23 PM).png](testing/cloudhawk_testing_screenshots/ML%20engine%20status%20(8:20:23%20PM).png)  
   Confirms anomaly detection service is active.
 
 - **Prometheus data source connected**  
-  → [Prometheus data source – success.png](testing/cloudhawk_testing_screenshots/Prometheus%20data%20source%20–%20success.png)  
+  → ![Prometheus data source – success.png](testing/cloudhawk_testing_screenshots/Prometheus%20data%20source%20–%20success.png)  
   Confirms Grafana can query Prometheus metrics.
 
 - **Data sources list**  
-  → [Data sources list.png](testing/cloudhawk_testing_screenshots/Data%20sources%20list.png)  
+  → ![Data sources list.png](testing/cloudhawk_testing_screenshots/Data%20sources%20list.png)  
   Shows Prometheus registered as the default monitoring source.
 
 ---

@@ -159,7 +159,19 @@ class AnomalyDetectionEngine:
         """Extract temporal pattern features"""
         try:
             event_data = event['event_data']
-            timestamp = datetime.fromisoformat(event['time'].replace('Z', '+00:00'))
+            raw_ts = event.get("time") or event.get("eventTime") or event.get("timestamp")
+
+            if isinstance(raw_ts, (int, float)):
+                timestamp = datetime.fromtimestamp(raw_ts, tz=timezone.utc)
+
+            elif isinstance(raw_ts, str):
+                try:
+                    timestamp = datetime.fromisoformat(raw_ts.replace("Z", "+00:00"))
+                except Exception:
+                    timestamp = datetime.fromtimestamp(float(raw_ts), tz=timezone.utc)
+
+            else:
+                timestamp = datetime.now(timezone.utc)
             
             # Time-based features
             features = [
