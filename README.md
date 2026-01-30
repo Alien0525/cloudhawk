@@ -36,43 +36,6 @@ A production-grade, AI-powered distributed security monitoring system that inges
 | **Monitoring** | Prometheus, Grafana |
 | **Infrastructure** | Docker, Docker Compose |
 
-## Prerequisites
-
-- Docker & Docker Compose (v2.0+)
-- 8GB+ RAM recommended
-- 10GB+ free disk space
-
-## Quick Start
-
-### 1. Clone and Navigate
-```bash
-cd cloudhawk
-```
-
-### 2. Start the Stack
-```bash
-docker-compose up -d
-```
-
-### 3. Wait for Services (2-3 minutes)
-```bash
-# Check status
-docker-compose ps
-
-# View logs
-docker-compose logs -f
-```
-
-### 4. Access Dashboards
-
-| Service | URL | Credentials |
-|---------|-----|-------------|
-| **CloudHawk Dashboard** | http://localhost:3000 | None |
-| **API Documentation** | http://localhost:8000/docs | None |
-| **Grafana** | http://localhost:3001 | admin / admin |
-| **Prometheus** | http://localhost:9090 | None |
-| **Elasticsearch** | http://localhost:9200 | None |
-
 ## Testing & Visual Validation
 
 All core components of CloudHawk were validated using live attack simulation, real-time stream processing, ML anomaly detection, and monitoring dashboards.
@@ -168,6 +131,43 @@ This testing suite proves:
 - Production-grade observability  
 
 CloudHawk operates as a complete real-time cloud security platform.
+
+## Prerequisites
+
+- Docker & Docker Compose (v2.0+)
+- 8GB+ RAM recommended
+- 10GB+ free disk space
+
+## Quick Start
+
+### 1. Clone and Navigate
+```bash
+cd cloudhawk
+```
+
+### 2. Start the Stack
+```bash
+docker-compose up -d
+```
+
+### 3. Wait for Services (2-3 minutes)
+```bash
+# Check status
+docker-compose ps
+
+# View logs
+docker-compose logs -f
+```
+
+### 4. Access Dashboards
+
+| Service | URL | Credentials |
+|---------|-----|-------------|
+| **CloudHawk Dashboard** | http://localhost:3000 | None |
+| **API Documentation** | http://localhost:8000/docs | None |
+| **Grafana** | http://localhost:3001 | admin / admin |
+| **Prometheus** | http://localhost:9090 | None |
+| **Elasticsearch** | http://localhost:9200 | None |
 
 ## What You'll See
 
