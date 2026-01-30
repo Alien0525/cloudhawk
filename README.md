@@ -73,6 +73,102 @@ docker-compose logs -f
 | **Prometheus** | http://localhost:9090 | None |
 | **Elasticsearch** | http://localhost:9200 | None |
 
+## Testing & Visual Validation
+
+All core components of CloudHawk were validated using live attack simulation, real-time stream processing, ML anomaly detection, and monitoring dashboards.
+
+All screenshots are stored in:
+
+`./testing/cloudhawk_testing_screenshots/`
+
+This section documents what each screenshot proves.
+
+---
+
+### 1. Platform & Infrastructure
+
+- **Docker microservices running**  
+  → [Docker microservices running.png](testing/cloudhawk_testing_screenshots/Docker%20microservices%20running.png)  
+  Confirms all CloudHawk containers (Kafka, Redis, API, ML engine, DB, Dashboard, Prometheus, Grafana) are healthy.
+
+- **Kafka event stream**  
+  → [Kafka event stream.png](testing/cloudhawk_testing_screenshots/Kafka%20event%20stream.png)  
+  Shows CloudTrail events flowing into Kafka topics.
+
+- **Stream processor throughput**  
+  → [Stream processor throughput.png](testing/cloudhawk_testing_screenshots/Stream%20processor%20throughput.png)  
+  Verifies real-time ingestion and processing performance.
+
+- **ML engine status**  
+  → [ML engine status (8:20:23 PM).png](testing/cloudhawk_testing_screenshots/ML%20engine%20status%20(8:20:23%20PM).png)  
+  Confirms anomaly detection service is active.
+
+- **Prometheus data source connected**  
+  → [Prometheus data source – success.png](testing/cloudhawk_testing_screenshots/Prometheus%20data%20source%20–%20success.png)  
+  Confirms Grafana can query Prometheus metrics.
+
+- **Data sources list**  
+  → [Data sources list.png](testing/cloudhawk_testing_screenshots/Data%20sources%20list.png)  
+  Shows Prometheus registered as the default monitoring source.
+
+---
+
+### 2. CloudHawk Dashboard (Security UI)
+
+- **Overview & live metrics**  
+  → [Dashboard - Overview & Live Metrics.png](testing/cloudhawk_testing_screenshots/Dashboard%20-%20Overview%20&%20Live%20Metrics.png)
+
+- **Active security alerts**  
+  → [Dashboard - Active Security Alerts.png](testing/cloudhawk_testing_screenshots/Dashboard%20-%20Active%20Security%20Alerts.png)
+
+- **Event timeline (24 hours)**  
+  → [Dashboard - Event Timeline (24H).png](testing/cloudhawk_testing_screenshots/Dashboard%20-%20Event%20Timeline%20(24H).png)
+
+- **Threat distribution**  
+  → [Dashboard - Threat Distribution.png](testing/cloudhawk_testing_screenshots/Dashboard%20-%20Threat%20Distribution.png)
+
+- **MITRE ATT&CK coverage**  
+  → [Dashboard - MITRE ATT&CK Coverage.png](testing/cloudhawk_testing_screenshots/Dashboard%20-%20MITRE%20ATT&CK%20Coverage.png)
+
+- **Top active users & suspicious IPs**  
+  → [Dashboard - Top Active Users & Suspicious IPs.png](testing/cloudhawk_testing_screenshots/Dashboard%20-%20Top%20Active%20Users%20&%20Suspicious%20IPs.png)
+
+- **Recent security events (live feed)**  
+  → [Dashboard - Recent Security Events (Live Feed).png](testing/cloudhawk_testing_screenshots/Dashboard%20-%20Recent%20Security%20Events%20(Live%20Feed).png)
+
+---
+
+### 3. Monitoring & Metrics (Grafana + Prometheus)
+
+- **up{} health query**  
+  → [Explore → up{}.png](testing/cloudhawk_testing_screenshots/Explore%20→%20up{}.png)
+
+- **Prometheus time-series database growth**  
+  → [Explore → prometheus_tsdb_head_series{}.png](testing/cloudhawk_testing_screenshots/Explore%20→%20prometheus_tsdb_head_series{}.png)
+
+- **CPU usage metrics**  
+  → [Explore → process_cpu_seconds_total{}.png](testing/cloudhawk_testing_screenshots/Explore%20→%20process_cpu_seconds_total{}.png)
+
+---
+
+### 4. Attack Simulation & Detection
+
+- **Attack simulation + detection**  
+  → [Attack simulation + detection.png](testing/cloudhawk_testing_screenshots/Attack%20simulation%20+%20detection.png)
+
+---
+
+This testing suite proves:
+
+- End-to-end data flow (Kafka → ML → API → Dashboard)  
+- Live anomaly detection  
+- Real-time visualization  
+- Threat correlation  
+- MITRE ATT&CK mapping  
+- Production-grade observability  
+
+CloudHawk operates as a complete real-time cloud security platform.
+
 ## What You'll See
 
 ### CloudHawk Dashboard
