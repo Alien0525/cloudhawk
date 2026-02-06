@@ -1,4 +1,4 @@
-# 🦅 CloudHawk - Real-Time Cloud Threat Detection & Response System
+# CloudHawk - Real-Time Cloud Threat Detection & Response System
 
 A production-grade, AI-powered distributed security monitoring system that ingests AWS CloudTrail logs in real-time, analyzes events using ML-based anomaly detection, correlates threats, and provides automated response capabilities.
 
